@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose your location | Sargassum Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="topbar">
+    <div class="topbar-inner">
+      <div class="logo">
+        🌊 <span>Sargassum Hub</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="location.html" class="active">Choose your location</a>
+        <a href="how-it-works.html">How it works</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="page-header">
+      <h1>Choose your location</h1>
+      <p>Select your area to access the regional Sargassum dashboard.</p>
+    </header>
+
+    <section class="location-flow">
+      <div class="hub-card location-step">
+        <div class="journey-header">
+          <h2>Step 1 — Choose Country Group</h2>
+          <p class="journey-subtitle">
+            Start by selecting the geographic area you want to explore.
+          </p>
+        </div>
+
+        <div class="location-grid" id="country-grid">
+          <button class="location-card active-option" data-country="africa">Africa</button>
+          <button class="location-card active-option" data-country="central-america">Central America</button>
+          <button class="location-card placeholder-option" data-country="caribbean">Caribbean</button>
+          <button class="location-card placeholder-option" data-country="brazil">Brazil</button>
+          <button class="location-card disabled-option" disabled>
+            Others
+            <span>Coming soon</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hub-card location-step" id="region-step">
+        <div class="journey-header">
+          <h2>Step 2 — Choose Region</h2>
+          <p class="journey-subtitle">
+            Available regions will appear based on your previous selection.
+          </p>
+        </div>
+
+        <div class="location-grid" id="region-grid">
+          <div class="empty-state">Select a country group to continue.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="nav/location.js"></script>
+</body>
+</html>
