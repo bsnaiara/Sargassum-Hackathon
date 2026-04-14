@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sargassum Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="topbar">
+  <div class="topbar-inner">
+
+    <div class="logo">
+      🌊 <span>Sargassum Hub</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="location.html">Choose your location</a>
+      <a href="how-it-works.html">How it works</a>
+    </div>
+
+  </div>
+</nav>
+
+  <div class="container">
+    <header>
+      <h1>🌊 Sargassum Hub</h1>
+      <p>Your interactive guide to Sargassum and its applications.</p>
+    </header>
+
+    <section class="sargassum-hub">
+
+      <!-- ========================= -->
+      <!-- 1. GAMIFIED LEARNING -->
+      <!-- ========================= -->
+
+        <div class="journey-header">
+        <h2>Sargassum Learning Journey</h2>
+        <p class="journey-subtitle">
+            Explore the topic step by step, based on what is most useful for you.
+        </p>
+        </div>
+
+        <div class="journey-steps">
+        <div class="step-chip active">1. Basics</div>
+        <div class="step-chip">2. Types & Behavior</div>
+        <div class="step-chip">3. Use Cases</div>
+        <div class="step-chip">4. Impacts</div>
+        <div class="step-chip">5. Monitoring</div>
+        <div class="step-chip ">6. Final Recap</div>
+        </div>
+
+        <div id="calibration-step" class="calibration">
+        <p>How familiar are you with Sargassum?</p>
+
+        <div class="options">
+            <button onclick="startJourney(1)">I've never heard of it</button>
+            <button onclick="startJourney(2)">I know the basics</button>
+            <button onclick="startJourney(3)">I work with it / deal with it</button>
+        </div>
+        </div>
+
+        <div id="learning-module" class="hidden">
+        <div class="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+
+        <div class="level-card">
+            <div class="visual">
+            <img id="level-image" src="" alt="Sargassum visual" />
+            </div>
+
+            <div class="text">
+            <span id="level-tag" class="content-tag">Level 1</span>
+            <h3 id="level-title"></h3>
+            <p id="level-description"></p>
+            </div>
+
+            <div id="final-card" class="final-card hidden">
+            <div class="final-icon">🎉</div>
+            <h3 class="final-title">Congratulations!</h3>
+            <p class="final-description">
+                You completed the Sargassum learning journey. You now have a structured overview of the topic and are ready to explore more detailed sections.
+            </p>
+            </div>
+
+            <div class="journey-actions">
+            <button id="next-btn" onclick="nextLevel()">Next Level</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="future-sections">
+        <div class="future-card">
+            <span class="future-label">Coming soon</span>
+            <h3>Environmental Impacts</h3>
+            <p>Space reserved for impacts on tourism, coastal ecosystems, air quality, and daily life.</p>
+        </div>
+
+        <div class="future-card">
+            <span class="future-label">Coming soon</span>
+            <h3>Monitoring & Forecasting</h3>
+            <p>Space reserved for maps, alerts, seasonal patterns, and local observation tools.</p>
+        </div>
+        </div>
+
+        <!-- Levels -->
+        <div id="learning-module" class="hidden">
+
+          <!-- Progress -->
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+
+          <!-- Content -->
+          <div class="level-card">
+
+            <div class="visual">
+              <img id="level-image" src="" alt="Sargassum visual"/>
+            </div>
+
+            <div class="text">
+              <h3 id="level-title"></h3>
+              <p id="level-description"></p>
+            </div>
+
+            <button id="next-btn" onclick="nextLevel()">Next Level</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ========================= -->
+      <!-- 2. AI AGENT - SARGY -->
+      <!-- ========================= -->
+      <div class="hub-card agent">
+
+       <div class="agent-hero">
+        <h3>Sargy</h3>
+        <img src="images/Sargy.png" alt="Sargy Avatar" class="agent-visual"/>
+
+        <div class="agent-intro">
+            <div class="agent-intro bubble">
+            <p>Hi, I'm Sargy. I help you understand Sargassum and what it means for you.</p>
+            </div>
+
+        </div>
+        
+
+        </div>
+
+        <!-- Chat Mock -->
+        <div class="chat-box" id="chat-box">
+          <div class="message agent-msg">
+            Ask me something about Sargassum.
+          </div>
+        </div>
+
+        <!-- Quick Questions -->
+        <div class="quick-questions">
+          <button onclick="askQuestion(1)">What is Sargassum and why is it increasing?</button>
+          <button onclick="askQuestion(2)">Why does Sargassum accumulate on beaches?</button>
+          <button onclick="askQuestion(3)">What are the impacts of Sargassum on people and the environment?</button>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> 
